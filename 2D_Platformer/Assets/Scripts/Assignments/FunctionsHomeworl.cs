@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic; 
 using UnityEngine; 
  
-public class FunctionsHomework : MonoBehaviour 
+public class Functions_homework : MonoBehaviour 
 {   // Function "CalcSub" Variables
     int subnum1;
     int subnum2;
