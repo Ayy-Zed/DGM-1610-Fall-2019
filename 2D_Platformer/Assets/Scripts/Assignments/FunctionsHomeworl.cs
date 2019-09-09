@@ -22,7 +22,7 @@ public class Functions_homework : MonoBehaviour
     //Function "PersonalLife" variables
     string meName;
     string meSchool;
-    string meJob
+    string meJob;
     int meAge;
  
  
@@ -36,18 +36,18 @@ public class Functions_homework : MonoBehaviour
         multnum1 = 4;
         multnum2 = 5;
         //Function "Character" Declaration
-        charfName = "Jenson"
-        charGender = "Male"
-        charAge = 32
+        charfName = "Jenson";
+        charGender = "Male";
+        charAge = 32;
         //Function "UtahLaw" Declaration
-        lawStatement = "You must be a certain age to smoke."
-        lawAge = 19
-        lawItem = "Cigarettes"
+        lawStatement = "You must be a certain age to smoke.";
+        lawAge = 19;
+        lawItem = "Cigarettes";
         //Function "PersonalLife" Declaration
-        meName = "Connor"
-        meSchool = "UVU"
-        meJob = "Blaze Pizza"
-        meAge = 19
+        meName = "Connor";
+        meSchool = "UVU";
+        meJob = "Blaze Pizza";
+        meAge = 19;
     
         //Calling CalcSub
         CalcSub(subnum1, subnum2);
