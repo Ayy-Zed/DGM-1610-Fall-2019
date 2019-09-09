@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class SuperVillan : MonoBehaviour
 {
     string superVillanName = "Lucifer";
     string evilPower = "Turn into a red hornded beast";

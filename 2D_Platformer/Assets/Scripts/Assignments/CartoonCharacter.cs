@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class CartoonCharacters : MonoBehaviour
 {
     string cartoonName = "Jack Ludacris";
     string showName = "That boy's Ludacris";

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class Superhero : MonoBehaviour
 {
     string superHeroName = "Captain Oakely";
     string superPower = "Turns into an Oak Tree on Command";
