@@ -11,13 +11,13 @@ public class FollowPlayerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.Rotate (cameraRotate);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = plane.transform.position + offset;
-        transform.Rotate(cameraRotate * Time.deltaTime);
+
     }
 }

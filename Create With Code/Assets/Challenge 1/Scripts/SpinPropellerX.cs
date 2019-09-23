@@ -6,7 +6,7 @@ public class SpinPropellerX : MonoBehaviour
 {
 
     public Vector3 propeller;
-    private float speed = 1000;
+    private float speed = 2000;
 
     // Start is called before the first frame update
     void Start()
