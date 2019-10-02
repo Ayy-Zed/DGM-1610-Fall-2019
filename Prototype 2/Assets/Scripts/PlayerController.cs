@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //This code tests for spacebar press to launch Pizza
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
     }
