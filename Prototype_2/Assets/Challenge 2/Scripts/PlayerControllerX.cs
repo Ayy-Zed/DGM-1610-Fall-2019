@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     public GameObject dogPrefab;
-    public float dogspawnRate = 0.5f;
+    public float dogspawnRate = 0.3f;
     private float nextDog = 0.0f;
 
     // Update is called once per frame
