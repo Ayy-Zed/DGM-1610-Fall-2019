@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
             isOnGround = false;
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
+        }
     }
 
     private void OnCollisionEnter (Collision collision)
@@ -38,16 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
-        }
-        //else if(Input.GetKeyDown(KeyCode.S) && !isOnGround)
-        {
-           // Instantiate(projectile, transform.position, projectile.transform.rotation);
-        }
-
+        
         if (collision.gameObject.CompareTag("RoadBlock"))
         {
             Debug.Log("Game Over!");
