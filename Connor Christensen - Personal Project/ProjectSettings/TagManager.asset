@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Projectile
+  - Dog
+  - RoadBlock
+  - Bomb
+  - Food
   layers:
   - Default
   - TransparentFX
