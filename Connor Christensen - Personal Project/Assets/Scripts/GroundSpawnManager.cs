@@ -9,9 +9,12 @@ public class GroundSpawnManager : MonoBehaviour
     private float startDelay = 2;
     private float spawnInterval = 1.5f;
 
+    private PlayerController playerControllerScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         InvokeRepeating("SpawnRandomGround", startDelay, spawnInterval);
     }
 
@@ -23,7 +26,10 @@ public class GroundSpawnManager : MonoBehaviour
 
     void SpawnRandomGround()
     {
-        int groundIndex = Random.Range(0, groundPrefabs.Length);
-        Instantiate(groundPrefabs[groundIndex], new Vector3(15, 4, -10 ),groundPrefabs[groundIndex].transform.rotation);
+        if (playerControllerScript.gameOver == false)
+        {
+            int groundIndex = Random.Range(0, groundPrefabs.Length);
+            Instantiate(groundPrefabs[groundIndex], new Vector3(15, 4, -10 ),groundPrefabs[groundIndex].transform.rotation);
+        }
     }
 }
