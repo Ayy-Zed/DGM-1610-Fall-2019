@@ -18,9 +18,19 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Projectile"))
+        if (other.gameObject.CompareTag("Dog"))
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("RoadBlock"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Bomb"))
+        {
             Destroy(gameObject);
         }
     }

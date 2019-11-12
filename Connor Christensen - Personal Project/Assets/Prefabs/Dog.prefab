@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 5086143070528462550}
   - component: {fileID: 5086143070528462551}
   - component: {fileID: 5086143070528462548}
-  - component: {fileID: 5086143070528462544}
   - component: {fileID: 8825400630700832203}
   - component: {fileID: 5086143070528462545}
   - component: {fileID: 5086143070528462549}
-  - component: {fileID: 2208465240089211518}
+  - component: {fileID: 4637242383314045054}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5086143070528462554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.71, y: 2.25, z: -4.56}
+  m_LocalPosition: {x: -5.71, y: 2.467, z: -4.56}
   m_LocalScale: {x: 1.503154, y: 1.503154, z: 1.503154}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5086143070528462544
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086143070528462554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8825400630700832203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,15 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04270ef5fa28e34cbf08b697a6c15e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2208465240089211518
-MonoBehaviour:
+--- !u!65 &4637242383314045054
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5086143070528462554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93062760aff243449be34bf98112c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 2.3375072, y: 2.5824137, z: 1.2324547}
+  m_Center: {x: -0.05452247, y: 0.2425153, z: 0.116227046}
