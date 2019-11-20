@@ -67,7 +67,7 @@ public class GameManagerX : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "score" + score;
+        scoreText.text = "score " + score;
     }
 
     // Stop game, bring up game over text and restart button
@@ -90,14 +90,15 @@ public class GameManagerX : MonoBehaviour
         isGameActive = true;
         StartCoroutine(SpawnTarget());
         score = 0;
+        timeLeft = 60.0f;
         UpdateScore(0);
         titleScreen.SetActive(false);
-        UpdateTime();
+        UpdateTime(60);
     }
 
-    public void UpdateTime()
+    public void UpdateTime(float time)
     {
-        timeLeft = 60.0;
+        timeText.text = "time " + Mathf.Round(timeLeft);
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
