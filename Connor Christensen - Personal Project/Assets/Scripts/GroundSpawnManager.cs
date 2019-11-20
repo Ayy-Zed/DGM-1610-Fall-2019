@@ -7,7 +7,7 @@ public class GroundSpawnManager : MonoBehaviour
     public GameObject[] groundPrefabs;
 
     private float startDelay = 2;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 1.2f;
 
     private PlayerController playerControllerScript;
 
@@ -29,7 +29,7 @@ public class GroundSpawnManager : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             int groundIndex = Random.Range(0, groundPrefabs.Length);
-            Instantiate(groundPrefabs[groundIndex], new Vector3(15, 4, -10 ),groundPrefabs[groundIndex].transform.rotation);
+            Instantiate(groundPrefabs[groundIndex], new Vector3(25, 2.5f, -10 ),groundPrefabs[groundIndex].transform.rotation);
         }
     }
 }

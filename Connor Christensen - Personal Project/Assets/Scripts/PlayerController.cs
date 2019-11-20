@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
 
     private float gravityModifier = 10;
-    private float jumpForce = 220;
+    private float jumpForce = 660;
 
     private bool isOnGround = true;
     public bool gameOver = false;
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter (Collision collision)
     {//Only lets player jump when they touch the ground
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && !gameOver)
         {
             isOnGround = true;
         }

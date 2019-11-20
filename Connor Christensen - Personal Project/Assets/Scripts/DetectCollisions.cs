@@ -23,15 +23,5 @@ public class DetectCollisions : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-
-        if (other.gameObject.CompareTag("RoadBlock"))
-        {
-            Destroy(gameObject);
-        }
-
-        if (other.gameObject.CompareTag("Bomb"))
-        {
-            Destroy(gameObject);
-        }
     }
 }
