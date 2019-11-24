@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     
-    {   //If spacebar is pressed and player is on the ground then jump
+    {   //If spacebar is pressed and player is on the ground then jump, also plays sounds and particles as well as animations
         if (Input.GetKeyDown(KeyCode.W) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, .50f);
-        }
+        }//Shoots projectile on D
         if (Input.GetKeyDown(KeyCode.D))
         {
             Instantiate(projectile, transform.position, projectile.transform.rotation);
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             dirtParticle.Play();
         }
-        
+        //Plays and stops animations, sounds, particles, and stops game
         if (collision.gameObject.CompareTag("RoadBlock"))
         {
             Debug.Log("Game Over!");
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
 
-        }
+        }//Plays and stops animations, sounds, particles, and stops game
         else if (collision.gameObject.CompareTag("Bomb"))
         {
             Debug.Log("Game Over!");

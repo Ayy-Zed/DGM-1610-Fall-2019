@@ -17,7 +17,7 @@ public class DetectCollisions : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {//Detects projectile on dog 
         if (other.gameObject.CompareTag("Dog"))
         {
             Destroy(other.gameObject);

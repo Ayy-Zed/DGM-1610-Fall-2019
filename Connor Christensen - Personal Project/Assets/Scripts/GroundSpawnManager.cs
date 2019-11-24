@@ -13,7 +13,7 @@ public class GroundSpawnManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {//Finds player controller script to detect game over, and spawns random ground prefabs
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         InvokeRepeating("SpawnRandomGround", startDelay, spawnInterval);
     }
@@ -25,7 +25,7 @@ public class GroundSpawnManager : MonoBehaviour
     }
 
     void SpawnRandomGround()
-    {
+    {//If game is not over, then spawn random ground prefab at designated spot
         if (playerControllerScript.gameOver == false)
         {
             int groundIndex = Random.Range(0, groundPrefabs.Length);

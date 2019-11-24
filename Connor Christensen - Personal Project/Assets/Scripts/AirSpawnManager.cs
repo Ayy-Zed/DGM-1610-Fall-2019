@@ -13,9 +13,9 @@ public class AirSpawnManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {//Gets Player Controller script to detect game over
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        
+        //Spawns random air prefab at designated time
         InvokeRepeating("SpawnRandomAir", startDelay, spawnInterval);
     }
 
@@ -26,7 +26,7 @@ public class AirSpawnManager : MonoBehaviour
     }
 
     void SpawnRandomAir()
-    {
+    {//If game is not over, picks a random air prefab and spawns at designated spot
         if (playerControllerScript.gameOver == false)
         {
             int airIndex = Random.Range(0, airPrefabs.Length);

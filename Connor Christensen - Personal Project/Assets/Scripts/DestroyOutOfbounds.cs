@@ -14,11 +14,11 @@ public class DestroyOutOfbounds : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { //If objects go too far right they will be destroyed
         if (transform.position.x > rightBound)
         {
             Destroy(gameObject);
-        } 
+        } //If objects go too far left they will be destroyed
         else if (transform.position.x < leftBound)
         {
             Destroy(gameObject);

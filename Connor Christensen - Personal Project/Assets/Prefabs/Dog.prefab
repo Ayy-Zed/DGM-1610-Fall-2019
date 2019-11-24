@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb6ad3ce5ac46447b04b7310205443e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: 0
 --- !u!1 &5086143070528462554
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb6ad3ce5ac46447b04b7310205443e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: -1
 --- !u!1001 &3012787389307643839
 PrefabInstance:
   m_ObjectHideFlags: 0

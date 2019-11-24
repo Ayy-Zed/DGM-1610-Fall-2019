@@ -8,14 +8,14 @@ public class RepeatBackground : MonoBehaviour
     private float repeatWidth;
     // Start is called before the first frame update
     void Start()
-    {
+    {   //Gets dimensions so we can repeat background flawlessly
         startPos = transform.position;
         repeatWidth = GetComponent<BoxCollider>().size.x / 2;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   //Actually repeats background
         if (transform.position.x < startPos.x -repeatWidth)
         {
             transform.position = startPos;
