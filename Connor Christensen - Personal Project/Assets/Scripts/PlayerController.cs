@@ -7,9 +7,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     public GameObject projectile;
     private Animator playerAnim;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem bombParticle;
+    public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
+    private AudioSource playerAudio;
 
     private float gravityModifier = 10;
-    private float jumpForce = 660;
+    private float jumpForce = 2600;
 
     private bool isOnGround = true;
     public bool gameOver = false;
@@ -21,6 +27,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         Physics.gravity *=gravityModifier;
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,7 +39,8 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
-            Debug.Log("Playing Jump Animation");
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(jumpSound, .50f);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -45,6 +53,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") && !gameOver)
         {
             isOnGround = true;
+            dirtParticle.Play();
         }
         
         if (collision.gameObject.CompareTag("RoadBlock"))
@@ -53,7 +62,10 @@ public class PlayerController : MonoBehaviour
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
-            Debug.Log("Playing Death Animation");
+            explosionParticle.Play();
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(crashSound, 1.0f);
+
         }
         else if (collision.gameObject.CompareTag("Bomb"))
         {
@@ -61,7 +73,9 @@ public class PlayerController : MonoBehaviour
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
-            Debug.Log("Playing Death Animation");
+            bombParticle.Play();
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(crashSound, 1.0f);
         }
     }
 }

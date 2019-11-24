@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!135 &676806289140511610
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012787389307616255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13443609
+  m_Center: {x: -0.0011295568, y: 0.13612325, z: 0.0457626}
 --- !u!65 &4527293202840941705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66,6 +79,7 @@ GameObject:
   - component: {fileID: 5086143070528462549}
   - component: {fileID: 4637242383314045054}
   - component: {fileID: 6036671272106835286}
+  - component: {fileID: -5727322088242650853}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -187,6 +201,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+--- !u!114 &-5727322088242650853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086143070528462554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb6ad3ce5ac46447b04b7310205443e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3012787389307643839
 PrefabInstance:
   m_ObjectHideFlags: 0
