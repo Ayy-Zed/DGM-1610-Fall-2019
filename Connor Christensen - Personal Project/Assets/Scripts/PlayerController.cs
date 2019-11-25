@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRb;
+
     public GameObject projectile;
-    private Animator playerAnim;
     public ParticleSystem explosionParticle;
     public ParticleSystem bombParticle;
     public ParticleSystem dirtParticle;
     public AudioClip jumpSound;
     public AudioClip crashSound;
+
     private AudioSource playerAudio;
+    private Animator playerAnim;
+    private Rigidbody playerRb;
+    private GameManager gameManager;
 
     private float gravityModifier = 10;
     private float jumpForce = 2600;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         Physics.gravity *=gravityModifier;
         playerAudio = GetComponent<AudioSource>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
+            gameManager.GameOver();
 
         }//Plays and stops animations, sounds, particles, and stops game
         else if (collision.gameObject.CompareTag("Bomb"))
@@ -76,6 +81,7 @@ public class PlayerController : MonoBehaviour
             bombParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
+            gameManager.GameOver();
         }
     }
 }

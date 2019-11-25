@@ -24,7 +24,7 @@ public class GroundSpawnManager : MonoBehaviour
 
     }
 
-    void SpawnRandomGround()
+    public void SpawnRandomGround()
     {//If game is not over, then spawn random ground prefab at designated spot
         if (playerControllerScript.gameOver == false)
         {

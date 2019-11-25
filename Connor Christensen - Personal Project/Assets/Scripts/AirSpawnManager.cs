@@ -25,7 +25,7 @@ public class AirSpawnManager : MonoBehaviour
       
     }
 
-    void SpawnRandomAir()
+    public void SpawnRandomAir()
     {//If game is not over, picks a random air prefab and spawns at designated spot
         if (playerControllerScript.gameOver == false)
         {
