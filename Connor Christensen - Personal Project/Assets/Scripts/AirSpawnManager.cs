@@ -15,8 +15,6 @@ public class AirSpawnManager : MonoBehaviour
     void Start()
     {//Gets Player Controller script to detect game over
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        //Spawns random air prefab at designated time
-        InvokeRepeating("SpawnRandomAir", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -32,5 +30,10 @@ public class AirSpawnManager : MonoBehaviour
             int airIndex = Random.Range(0, airPrefabs.Length);
             Instantiate(airPrefabs[airIndex], new Vector3(25, 10, -10 ),airPrefabs[airIndex].transform.rotation);
         }
+    }
+
+    public void SpawnAir()
+    {
+        InvokeRepeating("SpawnRandomAir", startDelay, spawnInterval);
     }
 }

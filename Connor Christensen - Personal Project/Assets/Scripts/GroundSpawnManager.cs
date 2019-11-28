@@ -15,7 +15,6 @@ public class GroundSpawnManager : MonoBehaviour
     void Start()
     {//Finds player controller script to detect game over, and spawns random ground prefabs
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        InvokeRepeating("SpawnRandomGround", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -31,5 +30,10 @@ public class GroundSpawnManager : MonoBehaviour
             int groundIndex = Random.Range(0, groundPrefabs.Length);
             Instantiate(groundPrefabs[groundIndex], new Vector3(25, 2.5f, -10 ),groundPrefabs[groundIndex].transform.rotation);
         }
+    }
+
+    public void SpawnGround()
+    {
+        InvokeRepeating("SpawnRandomGround", startDelay, spawnInterval);
     }
 }
