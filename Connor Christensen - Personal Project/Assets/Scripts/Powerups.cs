@@ -20,8 +20,10 @@ public class Powerups : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {//Assigns points to dogs and food on collision
         if (other.gameObject.CompareTag("Player"))
-        Destroy(gameObject);
-        gameManager.UpdateScore(pointValue);
+        {
+            Destroy(gameObject);
+            gameManager.UpdateScore(pointValue);
+        }
 
     }
 }

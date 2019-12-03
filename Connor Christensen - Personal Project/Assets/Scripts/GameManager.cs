@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     private GroundSpawnManager groundSpawnManagerScript;
     private AirSpawnManager airSpawnManagerScript;
+    private PlayerController playerControllerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
         groundSpawnManagerScript = GameObject.Find("GroundSpawnManager").GetComponent<GroundSpawnManager>();
         airSpawnManagerScript = GameObject.Find("AirSpawnManager").GetComponent<AirSpawnManager>();
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -56,8 +58,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
-       // SpawnGround();
-        //SpawnAir();
+        groundSpawnManagerScript.SpawnGround();
+        airSpawnManagerScript.SpawnAir();
     }
 
     public void InstructionsText()

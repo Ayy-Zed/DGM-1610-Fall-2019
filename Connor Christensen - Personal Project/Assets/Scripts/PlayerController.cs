@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
 
     private float gravityModifier = 10;
     private float jumpForce = 2600;
-
     private bool isOnGround = true;
     public bool gameOver = false;
 
@@ -62,23 +61,10 @@ public class PlayerController : MonoBehaviour
         //Plays and stops animations, sounds, particles, and stops game
         if (collision.gameObject.CompareTag("RoadBlock"))
         {
-            Debug.Log("Game Over!");
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
-            dirtParticle.Stop();
-            playerAudio.PlayOneShot(crashSound, 1.0f);
-            gameManager.GameOver();
-
-        }//Plays and stops animations, sounds, particles, and stops game
-        else if (collision.gameObject.CompareTag("Bomb"))
-        {
-            Debug.Log("Game Over!");
-            gameOver = true;
-            playerAnim.SetBool("Death_b", true);
-            playerAnim.SetInteger("DeathType_int", 1);
-            bombParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
             gameManager.GameOver();
