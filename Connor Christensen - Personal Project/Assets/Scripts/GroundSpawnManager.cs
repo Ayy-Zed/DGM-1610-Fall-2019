@@ -28,7 +28,7 @@ public class GroundSpawnManager : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             int groundIndex = Random.Range(0, groundPrefabs.Length);
-            Instantiate(groundPrefabs[groundIndex], new Vector3(25, 2.5f, -10 ),groundPrefabs[groundIndex].transform.rotation);
+            Instantiate(groundPrefabs[groundIndex], new Vector3(25, 2.8f, -10 ),groundPrefabs[groundIndex].transform.rotation);
         }
     }
 

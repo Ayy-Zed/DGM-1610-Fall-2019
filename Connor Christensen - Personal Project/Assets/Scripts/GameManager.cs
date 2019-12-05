@@ -17,17 +17,15 @@ public class GameManager : MonoBehaviour
     public Button startInstructions;
     private int score;
 
+
     private GroundSpawnManager groundSpawnManagerScript;
     private AirSpawnManager airSpawnManagerScript;
-    private PlayerController playerControllerScript;
 
     // Start is called before the first frame update
     void Start()
-    //Starts score at 0 and helps keep count
     {
         groundSpawnManagerScript = GameObject.Find("GroundSpawnManager").GetComponent<GroundSpawnManager>();
         airSpawnManagerScript = GameObject.Find("AirSpawnManager").GetComponent<AirSpawnManager>();
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

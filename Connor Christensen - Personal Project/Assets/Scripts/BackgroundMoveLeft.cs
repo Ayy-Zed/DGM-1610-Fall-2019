@@ -16,6 +16,11 @@ public class BackgroundMoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //As long as the game is not over the background will move
+        Invoke("BackgroundMove", 1.45f);
+    }
+
+    void BackgroundMove()
+    {
         if (playerControllerScript.gameOver == false)
         {
             transform.Translate(Vector3.right * Time.deltaTime * speed);

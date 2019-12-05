@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
 
     private float gravityModifier = 10;
-    private float jumpForce = 2600;
+    public float jumpForce = 2600;
     private bool isOnGround = true;
     public bool gameOver = false;
 
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         Physics.gravity *=gravityModifier;
         playerAudio = GetComponent<AudioSource>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Invoke("PlayDirt",1.45f);
     }
 
     // Update is called once per frame
@@ -69,5 +70,11 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(crashSound, 1.0f);
             gameManager.GameOver();
         }
+    }
+
+   public void PlayDirt()
+    {
+        dirtParticle.gameObject.SetActive(true);
+        dirtParticle.Play();
     }
 }

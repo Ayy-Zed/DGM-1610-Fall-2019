@@ -1352,7 +1352,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 17.746706
+  field of view: 9.830474
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1378,7 +1378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.015219556, y: 0.012224797, z: -0.0055921017, w: 0.9997939}
-  m_LocalPosition: {x: -8.06, y: 8.23, z: -70.96}
+  m_LocalPosition: {x: -8.89, y: 6.88, z: -115.23}
   m_LocalScale: {x: 1, y: 1, z: 0.48718268}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2109,6 +2109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_DirtSplatter
       objectReference: {fileID: 0}
+    - target: {fileID: 4356800953600124292, guid: fb82dfb8d1c7044c69afd2486befecb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1419152992, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -2274,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6377cba297062cd44964171a3e9185ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 25
 --- !u!65 &1610196529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2388,8 +2393,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6774617, y: 2.1348774, z: 1.0000002}
-  m_Center: {x: 0.01956697, y: 1.0296457, z: 1.9030104e-17}
+  m_Size: {x: 0.67746156, y: 2.1033611, z: 0.5474173}
+  m_Center: {x: 0.019566972, y: 1.0454098, z: -0.017885877}
 --- !u!82 &1758634757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2410,7 +2415,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.08344948
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2882,17 +2887,17 @@ PrefabInstance:
     - target: {fileID: 7439743056170816261, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.170001
+      value: -13.13
       objectReference: {fileID: 0}
     - target: {fileID: 7439743056170816261, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7599999
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 7439743056170816261, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.997728
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7439743056170816261, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
@@ -2942,7 +2947,7 @@ PrefabInstance:
     - target: {fileID: 7439743056170816259, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7439743056170816259, guid: 56e9c240d9bc42949ac3acc94f62cba6,
         type: 3}
