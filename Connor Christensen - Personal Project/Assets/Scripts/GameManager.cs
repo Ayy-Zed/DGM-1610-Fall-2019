@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void UpdateScore(int scoreToAdd)
     {//Adds score to variable
         score += scoreToAdd;
@@ -44,11 +49,6 @@ public class GameManager : MonoBehaviour
     {
         restartButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void StartGame()

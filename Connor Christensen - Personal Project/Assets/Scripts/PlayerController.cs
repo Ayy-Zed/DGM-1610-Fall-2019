@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
 
     private float gravityModifier = 10;
-    public float jumpForce = 2600;
+    private float jumpForce = 2600;
     private bool isOnGround = true;
     public bool gameOver = false;
 
